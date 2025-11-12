@@ -14,7 +14,10 @@ A **JavaScript Quiz App** built using **vanilla JS** as part of **Harkirat’s C
 - 📱 **Responsive & Mobile-Friendly**: Fully responsive design that works on both desktop and mobile devices.
 
 ---
+## 🌐 Live Demo  
+👉 [Click here to play the quiz!](https://quiz-cohort3.netlify.app/)
 
+---
 ## 📂 Project Structure
 
 ```
@@ -35,6 +38,7 @@ A **JavaScript Quiz App** built using **vanilla JS** as part of **Harkirat’s C
 ---
 
 ## 🖼️ Screenshots
+![Quiz App Screenshot](./preview.jpg)
 
 ### Start Screen  
 🟢 A simple “Start” button to begin the quiz.
