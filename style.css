@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(90deg, #090909fa, #000000de);
+  backdrop-filter: blur(50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.main > h1 {
+  margin: 40px 0 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start button {
+  padding: 10px 25px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.start button:hover {
+  bottom: 1px;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0 5px #84aedb;
+}
+
+.quizes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quizCard {
+  border: 1px solid #8e8e8e;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px);
+}
+
+.question {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  color: #c7c4c4;
+  cursor: pointer;
+  border: 1px solid #666;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.option:hover span {
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(108, 108, 108, 0.629);
+}
+.option input {
+  margin: 0 15px;
+  accent-color: #84aedb;
+}
+.option span {
+  padding: 12px;
+  flex: 1;
+  background-color: rgba(59, 59, 59, 0.156);
+  font-size: 1rem;
+}
+
+.selected {
+  background-color: #dedede !important;
+  color: #000;
+}
+.selected:hover {
+  background-color: #dedede !important;
+  color: #000!important;
+}
+
+.btnWrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 25px;
+  color: #d7d7d7;
+  border: 1px solid;
+  height: 40px;
+  width: 100px;
+  background-color: transparent;
+  font-size: 1rem;
+}
+.button:hover {
+  color: #ffffff;
+  box-shadow: inset 1px 1px 5px 0px #d5d5d547;
+  transition: all 0.3s ease-out;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.resultWrapper {
+  border: 1px solid #8e8e8e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px);
+  width: 100%;
+  max-width: 600px;
+  font-size: 1.3rem;
+}
+
+.outcomes {
+  padding: 10px;
+  text-align: center;
+}
+
+#attempts {
+  color: #bdbdbd;
+}
+#corrects {
+  color: rgb(61, 255, 47);
+}
+#incorrects {
+  color: rgb(219, 15, 15);
+}
+
+.reTest button {
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  user-select: none;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+.reTest button:hover {
+  bottom: 1px;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0 5px #84aedb;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .quizCard,
+  .resultWrapper {
+    width: 90%;
+  }
+
+  .question {
+    font-size: 1.2rem;
+  }
+
+  .option span {
+    font-size: 0.95rem;
+  }
+
+  .btnWrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .main > h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .option span {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    height: 38px;
+    font-size: 0.9rem;
+  }
+
+  .reTest button {
+    font-size: 0.9rem;
+  }
+
+  .resultWrapper {
+    font-size: 1.1rem;
+  }
+}
